@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Influencer BoosterX | Pricing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/landing.css">
+
+  <!-- Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+</head>
+<body class="landing-body dark-theme">
+
+  <!-- Ambient Background -->
+  <div class="ambient-bg">
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
+  </div>
+
+  <nav class="landing-nav">
+    <div class="logo">
+      <div class="logo-icon">🚀</div>
+      <div class="logo-text">
+        <span class="logo-title">BoosterX</span>
+      </div>
+    </div>
+    <div>
+      <button class="btn btn-ghost" onclick="openAuthModal('login')">Log In</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero-section">
+      <h1 class="hero-title animate-fadeInUp">Supercharge Your <br><span>Influence</span></h1>
+      <p class="hero-subtitle animate-fadeInUp" style="animation-delay: 0.1s">
+        The ultimate all-in-one platform to track your growth, generate viral AI content, and manage all your social media accounts in one place.
+      </p>
+      
+      <div class="animate-fadeInUp" style="animation-delay: 0.15s; margin-top: 40px; display: flex; justify-content: center; align-items: center; gap: 16px;">
+        <div style="font-size: 2.5rem;">🚀</div>
+        <div style="font-size: 1.8rem; font-weight: 800; font-family: var(--font-display); background: var(--grad-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+          Influencer BoosterX
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing-section">
+      <div class="pricing-header animate-fadeInUp" style="animation-delay: 0.2s">
+        <h2 class="pricing-title">Choose Your Plan</h2>
+        <p class="pricing-subtitle">Select the tier that best fits your growth journey.</p>
+      </div>
+
+      <div class="pricing-grid">
+        
+        <!-- Free Tier -->
+        <div class="pricing-card animate-fadeInUp" style="animation-delay: 0.3s">
+          <div class="pricing-tier">Free</div>
+          <div class="pricing-desc">Perfect for just starting out.</div>
+          <div class="pricing-price">$0<span class="pricing-period">/mo</span></div>
+          <div class="pricing-features">
+            <div class="feature-item"><svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg> 1 Platform connection</div>
+            <div class="feature-item"><svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg> Basic Dashboard</div>
+            <div class="feature-item missing"><svg class="feature-icon missing" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> No Analytics</div>
+            <div class="feature-item missing"><svg class="feature-icon missing" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> No AI Studio</div>
+          </div>
+          <button class="btn-subscribe secondary" onclick="subscribe('free')">Get Started</button>
+        </div>
+
+        <!-- Creator Tier -->
+        <div class="pricing-card animate-fadeInUp" style="animation-delay: 0.4s">
+          <div class="pricing-tier">Creator</div>
+          <div class="pricing-desc">For growing creators wanting insights.</div>
+          <div class="pricing-price">$19<span class="pricing-period">/mo</span></div>
+          <div class="pricing-features">
+            <div class="feature-item"><svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg> 3 Platform connections</div>
+            <div class="feature-item"><svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg> Full Analytics</div>
+            <div class="feature-item"><svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg> Post Tracker</div>
+            <div class="feature-item"><svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg> Basic AI Studio (Chat Only)</div>
+          </div>
+          <button class="btn-subscribe secondary" onclick="subscribe('creator')">Subscribe</button>
+        </div>
+
+        <!-- Pro Tier -->
+        <div class="pricing-card popular animate-fadeInUp" style="animation-delay: 0.5s">
+          <div class="pricing-tier">Pro</div>
+          <div class="pricing-desc">The complete package for serious influencers.</div>
+          <div class="pricing-price">$49<span class="pricing-period">/mo</span></div>
+          <div class="pricing-features">
+            <div class="feature-item"><svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg> 10 Platform connections</div>
+            <div class="feature-item"><svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg> Full Analytics & Heatmap</div>
+            <div class="feature-item"><svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg> Full AI Studio + Predictions</div>
+            <div class="feature-item"><svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg> Growth Tips</div>
+          </div>
+          <button class="btn-subscribe primary" onclick="subscribe('pro')">Subscribe</button>
+        </div>
+
+        <!-- Agency Tier -->
+        <div class="pricing-card animate-fadeInUp" style="animation-delay: 0.6s">
+          <div class="pricing-tier">Agency</div>
+          <div class="pricing-desc">For managing multiple creators.</div>
+          <div class="pricing-price">$99<span class="pricing-period">/mo</span></div>
+          <div class="pricing-features">
+            <div class="feature-item"><svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg> Unlimited connections</div>
+            <div class="feature-item"><svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg> Priority AI access</div>
+            <div class="feature-item"><svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg> Custom Branding</div>
+            <div class="feature-item"><svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg> API Access</div>
+          </div>
+          <button class="btn-subscribe secondary" onclick="subscribe('agency')">Subscribe</button>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Auth Modal -->
+  <div class="modal-overlay" id="authModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.8); z-index:999; align-items:center; justify-content:center;">
+    <div style="background:var(--bg-surface); padding:30px; border-radius:16px; width:400px; max-width:90%; border:1px solid var(--border-subtle); position:relative;">
+      <button onclick="closeAuthModal()" style="position:absolute; top:16px; right:16px; color:var(--text-muted); background:none; border:none; font-size:1.5rem; cursor:pointer;">&times;</button>
+      <h2 id="authTitle" style="margin-bottom:20px; font-family:var(--font-display); font-size:1.5rem;">Sign Up</h2>
+      
+      <div id="authError" style="color:var(--rose-400); margin-bottom:12px; font-size:0.85rem; display:none;"></div>
+      
+      <input type="hidden" id="authTier" value="free" />
+      <input type="hidden" id="authMode" value="signup" />
+
+      <div class="form-group" id="nameGroup">
+        <label class="form-label" style="display:block; margin-bottom:8px; font-size:0.85rem; color:var(--text-secondary);">Full Name</label>
+        <input type="text" id="authName" class="form-input" style="width:100%; padding:10px; background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:8px; color:white; margin-bottom:16px;" placeholder="Alex Rivera">
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label" style="display:block; margin-bottom:8px; font-size:0.85rem; color:var(--text-secondary);">Email</label>
+        <input type="email" id="authEmail" class="form-input" style="width:100%; padding:10px; background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:8px; color:white; margin-bottom:16px;" placeholder="alex@example.com">
+      </div>
+
+      <div class="form-group" id="passwordGroup">
+        <label class="form-label" style="display:flex; justify-content:space-between; margin-bottom:8px; font-size:0.85rem; color:var(--text-secondary);">
+          <span>Password</span>
+          <button id="authForgotBtn" onclick="setAuthMode('reset')" style="background:none; border:none; color:var(--cyan-400); cursor:pointer; font-weight:600; font-size:0.8rem; display:none;">Forgot?</button>
+        </label>
+        <input type="password" id="authPassword" class="form-input" style="width:100%; padding:10px; background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:8px; color:white; margin-bottom:24px;" placeholder="••••••••">
+      </div>
+
+      <button id="authBtnSubmit" class="btn btn-primary" style="width:100%; padding:12px; border-radius:8px; font-weight:700; background:var(--grad-primary); color:white; border:none; cursor:pointer;" onclick="handleAuthSubmit()">Create Account</button>
+      
+      <div style="text-align:center; margin-top:16px; font-size:0.85rem; color:var(--text-muted);">
+        <span id="authToggleText">Already have an account?</span> 
+        <button onclick="toggleAuthMode()" style="background:none; border:none; color:var(--cyan-400); cursor:pointer; font-weight:600;">Click here</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    async function subscribe(tier) {
+      try {
+        const session = await window.BoosterXSupabase.getSession();
+        if (session) {
+          // User is already logged in! Upgrade them directly.
+          await window.BoosterXSupabase.updateProfileTier(session.user.id, tier);
+          window.location.href = 'index.html';
+          return;
+        }
+      } catch (e) {}
+      
+      document.getElementById('authTier').value = tier;
+      openAuthModal('signup');
+    }
+
+    function openAuthModal(mode) {
+      const modal = document.getElementById('authModal');
+      modal.style.display = 'flex';
+      modal.classList.add('open');
+      setAuthMode(mode);
+    }
+
+    function closeAuthModal() {
+      const modal = document.getElementById('authModal');
+      modal.classList.remove('open');
+      setTimeout(() => { modal.style.display = 'none'; }, 300);
+      document.getElementById('authError').style.display = 'none';
+    }
+
+    function toggleAuthMode() {
+      const mode = document.getElementById('authMode').value === 'signup' ? 'login' : 'signup';
+      setAuthMode(mode);
+    }
+
+    function setAuthMode(mode) {
+      document.getElementById('authMode').value = mode;
+      document.getElementById('authError').style.display = 'none';
+      
+      const nameGroup = document.getElementById('nameGroup');
+      const passwordGroup = document.getElementById('passwordGroup');
+      const forgotBtn = document.getElementById('authForgotBtn');
+      const btnSubmit = document.getElementById('authBtnSubmit');
+      const toggleText = document.getElementById('authToggleText');
+      const title = document.getElementById('authTitle');
+
+      if (mode === 'signup') {
+        title.innerText = 'Create Account';
+        nameGroup.style.display = 'block';
+        passwordGroup.style.display = 'block';
+        forgotBtn.style.display = 'none';
+        btnSubmit.innerText = 'Create Account';
+        toggleText.innerText = 'Already have an account?';
+      } else if (mode === 'login') {
+        title.innerText = 'Welcome Back';
+        nameGroup.style.display = 'none';
+        passwordGroup.style.display = 'block';
+        forgotBtn.style.display = 'block';
+        btnSubmit.innerText = 'Log In';
+        toggleText.innerText = 'Need an account?';
+      } else if (mode === 'reset') {
+        title.innerText = 'Reset Password';
+        nameGroup.style.display = 'none';
+        passwordGroup.style.display = 'none';
+        forgotBtn.style.display = 'none';
+        btnSubmit.innerText = 'Send Reset Link';
+        toggleText.innerText = 'Remembered your password?';
+      }
+    }
+
+    async function handleAuthSubmit() {
+      const mode = document.getElementById('authMode').value;
+      const email = document.getElementById('authEmail').value;
+      const pass = document.getElementById('authPassword').value;
+      const name = document.getElementById('authName').value;
+      const tier = document.getElementById('authTier').value;
+      const errorDiv = document.getElementById('authError');
+      const btn = document.getElementById('authBtnSubmit');
+      
+      errorDiv.style.display = 'none';
+      btn.innerText = 'Processing...';
+      btn.disabled = true;
+
+      try {
+        if (mode === 'signup') {
+          await window.BoosterXSupabase.signUp(email, pass, name);
+          // Wait 1 second for auth trigger to create profile, then update tier if not free
+          if (tier !== 'free') {
+            setTimeout(async () => {
+              const session = await window.BoosterXSupabase.getSession();
+              if (session?.user) {
+                await window.BoosterXSupabase.updateProfileTier(session.user.id, tier);
+              }
+              window.location.href = 'index.html';
+            }, 1000);
+          } else {
+            window.location.href = 'index.html';
+          }
+        } else if (mode === 'login') {
+          await window.BoosterXSupabase.signIn(email, pass);
+          window.location.href = 'index.html';
+        } else if (mode === 'reset') {
+          await window.BoosterXSupabase.resetPasswordForEmail(email);
+          errorDiv.innerText = '✅ Password reset email sent! Please check your inbox.';
+          errorDiv.style.color = 'var(--emerald-400)';
+          errorDiv.style.display = 'block';
+          btn.innerText = 'Link Sent';
+          return; // leave button disabled
+        }
+      } catch (error) {
+        errorDiv.innerText = error.message;
+        errorDiv.style.color = 'var(--rose-400)';
+        errorDiv.style.display = 'block';
+        btn.innerText = mode === 'signup' ? 'Create Account' : (mode === 'login' ? 'Log In' : 'Send Reset Link');
+        btn.disabled = false;
+      }
+    }
+    
+    // Check if already logged in
+    window.addEventListener('DOMContentLoaded', async () => {
+      // If user came here to upgrade, do not force redirect!
+      if (window.location.hash === '#upgrade') return;
+      
+      try {
+        const session = await window.BoosterXSupabase.getSession();
+        if (session) {
+          window.location.href = 'index.html';
+        }
+      } catch(e) {}
+    });
+  </script>
+</body>
+</html>

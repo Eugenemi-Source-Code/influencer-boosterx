@@ -142,7 +142,7 @@ window.AIStudioPage = (() => {
   function init() {
     // Auto-fill API key if provided by user in previous chat
     if (!localStorage.getItem('gemini_api_key')) {
-      localStorage.setItem('gemini_api_key', 'AIzaSyBv21O5rW-x8XQ9TdE6mWkqRiJTDfUenTM');
+      localStorage.setItem('gemini_api_key', '');
     }
 
     const keyInput = document.getElementById('geminiApiKey');
